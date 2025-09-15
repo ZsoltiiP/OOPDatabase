@@ -11,6 +11,8 @@ namespace OOPAdatbazis
         static void Main(string[] args)
         {
 
+
+
         }
     }
 }
