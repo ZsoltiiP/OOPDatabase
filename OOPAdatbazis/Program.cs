@@ -28,23 +28,28 @@ namespace OOPDatabase
             //Console.WriteLine($"{book[1].Name} = {book[1].GetValue(item)}");
 
 
-            //Feladat3
+            ////Feladat3
+            //Console.Write("Kérem a könyv címét: ");
+            //string cim = Console.ReadLine();
+            //Console.Write("Kérem a könyv szerzőjét: ");
+            //string szerzo = Console.ReadLine();
+            //Console.Write("Kérem a könyv kiadási dátumát: ");
+            //string datum = Console.ReadLine();
 
-            Console.Write("Kérem a könyv címét: ");
-            string cim = Console.ReadLine();
-            Console.Write("Kérem a könyv szerzőjét: ");
-            string szerzo = Console.ReadLine();
-            Console.Write("Kérem a könyv kiadási dátumát: ");
-            string datum = Console.ReadLine();
+            //var book = new
+            //{
+            //    Title = cim,
+            //    Author = szerzo,
+            //    Release = datum
+            //};
 
-            var book = new
-            {
-                Title = cim,
-                Author = szerzo,
-                Release = datum
-            };
+            //sqlStatements.AddNewRecord(book);
 
-            sqlStatements.AddNewRecord(book);
+
+            //Feladat4
+            Console.Write("Kérem a törlendő rekord id-ját: ");
+            Console.WriteLine(sqlStatements.DeleteRecord(int.Parse(Console.ReadLine())));
+
 
         }
     }
