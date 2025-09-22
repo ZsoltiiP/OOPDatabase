@@ -52,22 +52,35 @@ namespace OOPDatabase
 
 
             //Feladat5
-            Console.Write("Kérem a könyv id-ját: ");
-            int id = int.Parse(Console.ReadLine());
-            Console.Write("Kérem a könyv címét: ");
-            string cim = Console.ReadLine();
-            Console.Write("Kérem a könyv szerzőjét: ");
-            string szerzo = Console.ReadLine();
-            Console.Write("Kérem a könyv kiadási dátumát: ");
-            string datum = Console.ReadLine();
+            //Console.Write("Kérem a könyv id-ját: ");
+            //int id = int.Parse(Console.ReadLine());
+            //Console.Write("Kérem a könyv címét: ");
+            //string cim = Console.ReadLine();
+            //Console.Write("Kérem a könyv szerzőjét: ");
+            //string szerzo = Console.ReadLine();
+            //Console.Write("Kérem a könyv kiadási dátumát: ");
+            //string datum = Console.ReadLine();
 
-            var book = new
+            //var book = new
+            //{
+            //    Title = cim,
+            //    Author = szerzo,
+            //    Release = datum
+            //};
+            //Console.WriteLine(sqlStatements.UpdateRecord(id,book));
+
+            try
             {
-                Title = cim,
-                Author = szerzo,
-                Release = datum
-            };
-            Console.WriteLine(sqlStatements.UpdateRecord(id,book));
+                Console.Write("Kérem az adatbázist amiből a lekérdezést szeretnéd: ");
+
+            }
+
+
+
+
+
+
+
 
         }
     }

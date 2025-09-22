@@ -14,7 +14,7 @@ namespace OOPDatabase
 
         private string ConnectionString;
 
-        public Connect(string database)
+        public Connect()
         {
             _host = "localhost";
             _database = "library";

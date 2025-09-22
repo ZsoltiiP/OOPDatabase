@@ -10,9 +10,9 @@ namespace OOPAdatbazis.Services
 {
     internal class TableBooks : ISqlStatements
     {
+        Connect conn = new Connect();
         public object AddNewRecord(object newBook)
         {
-            Connect conn = new Connect("library");
 
             conn.Connection.Open();
 
@@ -36,7 +36,6 @@ namespace OOPAdatbazis.Services
 
         public object DeleteRecord(int id)
         {
-            Connect conn = new Connect("library");
             
             conn.Connection.Open();
             string sql = "DELETE FROM `books` WHERE id = @id";
@@ -59,7 +58,6 @@ namespace OOPAdatbazis.Services
         {
             List<object> result = new List<object>();
 
-            Connect conn = new Connect("library");
 
             conn.Connection.Open();
 
@@ -91,8 +89,6 @@ namespace OOPAdatbazis.Services
 
         public object GetById(int id)
         {
-            Connect conn = new Connect("library");
-
             conn.Connection.Open();
 
             string sql = "SELECT * FROM books WHERE id = @id ";
@@ -120,7 +116,6 @@ namespace OOPAdatbazis.Services
 
         public object UpdateRecord(int id, object updateRecord)
         {
-            Connect conn = new Connect("library");
 
             conn.Connection.Open();
 
