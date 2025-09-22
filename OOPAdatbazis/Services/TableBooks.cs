@@ -117,5 +117,29 @@ namespace OOPAdatbazis.Services
 
             return book;
         }
+
+        public object UpdateRecord(int id, object updateRecord)
+        {
+            Connect conn = new Connect("library");
+
+            conn.Connection.Open();
+
+            string sql = "UPDATE `books` SET " +
+                "`title`=@title,`author`=@author,`releaseDate`=@release WHERE id = @id";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+
+            var book = updateRecord.GetType().GetProperties();
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@title", book[0].GetValue(updateRecord));
+            cmd.Parameters.AddWithValue("@author", book[1].GetValue(updateRecord));
+            cmd.Parameters.AddWithValue("@release", book[2].GetValue(updateRecord));
+
+            cmd.ExecuteNonQuery();
+
+            conn.Connection.Close();
+
+            return new { Message = "Sikeres frissítés." };
+        }
     }
 }
